@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cdn-icons-png.flaticon.com/512/2909/2909765.png" width="120" alt="Sustainable Logo">
+  <img src="https://www.euroschoolindia.com/blogs/wp-content/uploads/2023/07/types-of-sustainable-development.jpg" width="120" alt="Sustainable Logo">
   <h1 align="center">Sustainable</h1>
   <p align="center">
     <b>Empowering responsible consumption and production for a better world.</b><br>
