@@ -132,7 +132,7 @@ a {
 .section p, .section li {
   font-size: 1.1rem;
   color: #444;
-  justify-content: left;
+  margin: 1;
 }
 
 .section ul {
