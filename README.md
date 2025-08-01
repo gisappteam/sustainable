@@ -63,15 +63,6 @@ Try the chatbot:
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-  <img src="assets/demo-chatbot.png" width="80%" alt="Chatbot Demo">
-  <br><br>
-  <img src="assets/progress-tracker.png" width="80%" alt="Progress Tracker Demo">
-</div>
-
----
 
 ## 🌏 Why SDG 12?
 
