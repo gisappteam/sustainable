@@ -1,97 +1,344 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SustainMate</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+/* Reset and font */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4fdf5;
+  color: #1e1e1e;
+  scroll-behavior: smooth;
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- AOS Library -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-</head>
-<!-- Only body shown for brevity; assume head/meta/font links already included -->
-<body>
-  <nav class="navbar">
-    <div class="nav-logo">SustainMate</div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#features">Features</a>
-      <a href="#sdg12">SDG 12</a>
-      <a href="#contact">Contact</a>
-      <a href="https://www.chatbase.co/WZhheOEWcSclkEPoFWTpE/help" class="btn try-now">Try Now</a>
-    </div>
-  </nav>
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-  <header class="hero" id="try">
-    <div class="hero-content">
-      <div class="hero-text" data-aos="fade-right">
-        <h1>Your Smart Partner in Sustainable Living</h1>
-        <p>SustainMate is an AI chatbot built to guide responsible consumption and production habits — all aligned with UN Sustainable Development Goal 12.</p>
-        <a href="#features" class="btn">Explore Features</a>
-      </div>
-      <div class="hero-image" data-aos="fade-left">
-        <img src="Cover_AI-chatbots-in-GreenTech-630x450.png" alt="SustainMate Chatbot Illustration" />
-      </div>
-    </div>
-  </header>
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background-color: #2a4d3e;
+  color: #f5fff8;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
-  <section id="about" class="section" data-aos="fade-up">
-    <h2>About SustainMate</h2>
-    <p>SustainMate is a next-generation AI chatbot designed to empower individuals and organizations to live and operate more sustainably. From reducing single-use plastics to optimizing supply chains for eco-efficiency, SustainMate is your all-in-one green lifestyle coach.</p>
-  </section>
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #a8ffcf;
+  transition: transform 0.3s;
+}
+.nav-logo:hover {
+  transform: scale(1.05);
+}
 
-  <section id="features" class="section" data-aos="fade-up">
-    <h2>Features</h2>
-    <ul>
-      <li><strong>🌿 Personalized Tips:</strong> Get daily recommendations based on your habits and local data.</li>
-      <li><strong>📊 Eco Habit Tracking:</strong> Measure your footprint and celebrate your progress over time.</li>
-      <li><strong>🔁 Circular Economy Guide:</strong> Discover ways to reuse, recycle, and redesign your life.</li>
-      <li><strong>🤖 SDG Education:</strong> Learn interactively about the importance of sustainable development.</li>
-    </ul>
-  </section>
+.nav-links a {
+  margin-left: 1.5rem;
+  font-weight: 600;
+  color: #f5fff8;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #a8ffcf;
+  transition: width 0.3s;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.nav-links a:hover {
+  color: #a8ffcf;
+}
 
-  <section id="sdg12" class="section" data-aos="fade-up">
-    <h2>Why SDG 12?</h2>
-    <p>Goal 12 — Responsible Consumption and Production — is key to a sustainable future. SustainMate helps you take action through AI-driven suggestions that reduce waste, improve energy use, and encourage mindful decisions. Whether you're shopping, cooking, or managing a business, your choices matter.</p>
-  </section>
+/* Hero section */
+.hero {
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
 
-  <section id="testimonials" class="section" data-aos="zoom-in">
-    <h2>What Users Say</h2>
-    <div class="testimonial-container">
-      <div class="testimonial">
-        <p>"Lorem ipsum dolor sit amet. In obcaecati magni vel quia pariatur est accusamus laborum et quia quasi aut consequatur modi ut incidunt dicta non repellendus voluptatibus!"</p>
-        <span>— Priya R., India</span>
-      </div>
-      <div class="testimonial">
-        <p>"Lorem ipsum dolor sit amet. In obcaecati magni vel quia pariatur est accusamus laborum et quia quasi aut consequatur modi ut incidunt dicta non repellendus voluptatibus!"</p>
-        <span>— Leo M., Brazil</span>
-      </div>
-      <div class="testimonial">
-        <p>"Lorem ipsum dolor sit amet. In obcaecati magni vel quia pariatur est accusamus laborum et quia quasi aut consequatur modi ut incidunt dicta non repellendus voluptatibus!"</p>
-        <span>— Sarah K., UK</span>
-      </div>
-    </div>
-  </section>
+.hero-content {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
 
-  <section id="contact" class="section" data-aos="fade-up">
-    <h2>Get in Touch</h2>
-    <p>Want to partner, collaborate or have questions? Reach out at <a href="mailto:contact@sustainmate.ai">contact@sustainmate.ai</a></p>
-  </section>
+.hero-text {
+  flex: 1 1 400px;
+}
 
-  <footer class="footer">
-    <p>© 2025 SustainMate. All rights reserved.</p>
-  </footer>
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2a4d3e;
+}
 
-  <!-- AOS Script -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init();</script>
-</body>
-<script>AOS.init();</script>
-<script>
-  (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="WZhheOEWcSclkEPoFWTpE";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-  </script>
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
 
-</html>
+.btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #2a4d3e;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.btn:hover {
+  background-color: #4caf74;
+  transform: translateY(-2px);
+}
+
+.hero-image img {
+  max-width: 100%;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Section styles */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #2a4d3e;
+  margin-bottom: 1rem;
+}
+
+.section p, .section li {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
+}
+.section li {
+  margin-bottom: 0.6rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #2d3833;
+  color: #c8f9d2;
+}
+/* "Try Now" button in navbar */
+.btn-nav {
+  padding: 0.5rem 1rem;
+  background-color: #386641;
+  color: #FED16A;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-left: 2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-nav:hover {
+  background-color: #4caf74;
+  color: white;
+  transform: translateY(-2px);
+}
+/* TRY NOW BUTTON (Navbar) */
+.try-now {
+  background-color: #386641;
+  color: #1e1e1e;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.try-now:hover {
+  background-color: #386641;
+  transform: scale(1.05);
+}
+
+/* TESTIMONIAL SECTION */
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.testimonial {
+  background: #e9fff0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 300px;
+  transition: transform 0.3s;
+}
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+.testimonial p {
+  font-style: italic;
+  color: #333;
+}
+.testimonial span {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #2a4d3e;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.section p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: justify;
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .nav-links a {
+    margin-left: 1rem;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .testimonial {
+    max-width: 100%;
+  }
+}
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  .nav-links a {
+    margin: 0.5rem 1rem 0.5rem 0;
+  }
+
+  .hero-content {
+    padding-top: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.7rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section p,
+  .section li {
+    font-size: 1rem;
+  }
+}
+/* Contact Form */
+.contact-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #2a4d3e;
+  margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4caf74;
+  outline: none;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+.btn{
+  border-radius: 16px;
+  font-family: 'Poppins', sans-serif;
+}
