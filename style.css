@@ -5,6 +5,7 @@ body {
   background: #f4fdf5;
   color: #1e1e1e;
   scroll-behavior: smooth;
+  text-align: center;
 }
 
 a {
@@ -79,6 +80,7 @@ a {
 
 .hero-text {
   flex: 1 1 400px;
+  text-align: center;
 }
 
 .hero-text h1 {
@@ -97,9 +99,10 @@ a {
   padding: 0.8rem 1.5rem;
   background-color: #2a4d3e;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 16px;
   font-weight: 600;
   transition: background-color 0.3s, transform 0.2s;
+  font-family: 'Poppins', sans-serif;
 }
 .btn:hover {
   background-color: #4caf74;
@@ -122,6 +125,7 @@ a {
   padding: 4rem 2rem;
   max-width: 1000px;
   margin: auto;
+  text-align: center;
 }
 
 .section h2 {
@@ -133,6 +137,9 @@ a {
 .section p, .section li {
   font-size: 1.1rem;
   color: #444;
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 700px;
 }
 
 .section ul {
@@ -150,7 +157,8 @@ a {
   background: #2d3833;
   color: #c8f9d2;
 }
-/* "Try Now" button in navbar */
+
+/* Try Now button in navbar */
 .btn-nav {
   padding: 0.5rem 1rem;
   background-color: #386641;
@@ -166,7 +174,7 @@ a {
   color: white;
   transform: translateY(-2px);
 }
-/* TRY NOW BUTTON (Navbar) */
+
 .try-now {
   background-color: #386641;
   color: #1e1e1e;
@@ -181,7 +189,7 @@ a {
   transform: scale(1.05);
 }
 
-/* TESTIMONIAL SECTION */
+/* Testimonial section */
 .testimonial-container {
   display: flex;
   flex-wrap: wrap;
@@ -214,12 +222,8 @@ img {
   max-width: 100%;
   height: auto;
 }
-.section p {
-  max-width: 700px;
-  margin: 0 auto;
-  text-align: justify;
-}
-/* Medium devices (tablets, 768px and up) */
+
+/* Medium devices */
 @media (max-width: 1024px) {
   .hero-content {
     flex-direction: column;
@@ -252,7 +256,7 @@ img {
   }
 }
 
-/* Small devices (phones, 600px and down) */
+/* Small devices */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -297,6 +301,7 @@ img {
     font-size: 1rem;
   }
 }
+
 /* Contact Form */
 .contact-form {
   margin-top: 2rem;
@@ -336,9 +341,5 @@ img {
 }
 
 .contact-form button {
-  align-self: flex-start;
-}
-.btn{
-  border-radius: 16px;
-  font-family: 'Poppins', sans-serif;
+  align-self: center;
 }
